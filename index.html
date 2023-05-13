@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Logistic map visualization</title>
+    <script src="./chart.js"></script>
+    <link rel="stylesheet" type="text/css" href="./style.css">
+    <script defer src="./script.js"></script>
+</head>
+
+<body style = "margin-left:20px"> 
+    <h1>Die Logistische Gleichung</h1>
+    <div style="margin-left:30px">
+        <p> Logistische Gleichung: </p>
+        <img src="logisticEquation.png" style="zoom:0.15">
+        <div>
+            <div style="float:left; margin-right:20px; width:20%">
+                <p>x_0 Wert: <span id="x0Value"></span></p>
+                <input style="margin-top:-60px" type="range" min="0" max="2" step="0.001" value="0.048" id="x0Slider">
+            </div>
+            <div style="float: left; width:20%; margin-top:-4px">
+                <p>r-Wert: <span id="rValue"></span></p>
+                <input type="range" min="0" max="5" step="0.00001" value="2.662" id="rSlider">
+            </div>
+        </div>
+
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <div>
+            <div style="float:left; margin-right:50px; width:676px; height:338px" id="logisticDiagrammDiv">
+                <canvas id="myChart"></canvas>
+                <div id="resize-handle"></div>
+            </div>
+            <div id="bifurcationDiagrammDiv" style=" display:none; float: left; margin-top:-18px;">
+                <div style = "max-width:638px;">
+                    <p>Bifurkationsdiagramm </p>
+                    <p style="margin-top:-10px">y ⇒ P: Populationswerte gegen unendlich (welche und wie viele 'stabil' werden)</p>
+                    <p style="margin-top:-10px">x ⇒ Wert für r aus der logistischen Gleichung, ein Marker entspricht 0.2 </p>
+                </div>
+
+                <div id="bifurcationDiv" style="margin-top:17x">
+                    <p></p>
+                    <canvas id="bifurcationChart" style="zoom:1.2"></canvas>
+                    <div id="resize-handle2"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
